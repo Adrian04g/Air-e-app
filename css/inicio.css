@@ -1,0 +1,102 @@
+/* Asegúrate de que tu body tenga estos estilos para que el footer se mueva al final */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('img/azul.jpg'); /* Carga la imagen de fondo */
+  background-repeat: no-repeat;        /* Evita que la imagen se repita */
+  background-size: cover;              /* Ajusta la imagen para que cubra toda la pantalla */
+  background-position: center center;  /* Centra la imagen en la página */
+  font-family: Arial, sans-serif;
+  background-color: #83f6fa; /* Este es un color verde claro y suave */
+}
+
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #fcfdfd;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c9c9c9;
+    color: #555555;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #b0b0b0;
+}
+ .center-container {
+  display: flex;             /* This turns the container into a flexbox */
+  justify-content: center;   /* This centers the content horizontally */
+  align-items: center;       /* This centers the content vertically */
+  min-height: 100vh;         /* This ensures the container takes up the full height of the viewport */
+}
+
+
+
+.login-form-container {
+  background-color: rgba(135, 206, 235, 0.8); /* El mismo color azul, pero con 80% de opacidad */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+
+  /* --- Modificaciones para el ancho --- */
+  width: 350px; /* Puedes ajustar este valor: por ejemplo, 300px, 400px, etc. */
+  /* O usar max-width para que se adapte pero no exceda un límite: */
+  /* max-width: 400px; */
+  /* Y si quieres que se centre si es más pequeño que el contenedor: */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* --- Fin de las modificaciones --- */
+}
+/* Esta es la "función" que puedes usar como una clase */
+.fondo-verde-claro {
+  background-color: #6bf16b;
+}
+/* --- FUNCIÓN CSS para el pie de página --- */
+.pie-de-pagina {
+  background-color: #2F4F4F; /* Un color oscuro para que contraste */
+  color: white;             /* Color de texto blanco */
+  padding: 20px;            /* Espacio interno para el contenido */
+  text-align: center;       /* Centra el texto */
+  width: 100%;              /* Asegura que ocupe todo el ancho */
+  margin-top: auto;         /* Esto lo empuja al final si el contenido es corto */
+}
+/* --- FIN de la FUNCIÓN CSS para el pie de página --- */
+

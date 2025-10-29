@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.admin {
+  /* ✏️ Aplica el nuevo tipo de letra */
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 2.8rem; /* Ajusta este valor (2.5rem, 3rem, etc.) para el tamaño deseado */
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(155, 245, 250); /* Este es un color verde claro y suave */
+    width: auto;
+}
+.main-wrapper {
+    min-height: 100vh;
+}
+.content {
+    width: 100%;
+    align-items: center;
+}
+.sidebar {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    height: 100;
+    transition: all 0.3s;
+    padding: 1rem !important;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
+}
+.sidebar-collapsed {
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
+    transition: all 0.3s;
+}
+.sidebar-visible {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    transition: all 0.3s;
+    padding: 1rem !important;
+}
+.sidebar-toggle-btn {
+    position: relative;
+    z-index: 1050;
+}
+/* Overlay para móviles */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    display: block;
+    opacity: 1;
+}
+@media (max-width: 768px) {
+    /* Contenido principal ocupa toda la pantalla en móviles */
+    .content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 0.75rem;
+        height: auto;
+        overflow: visible;
+    }
+    /* Sidebar como overlay en móviles */
+    .sidebar {
+        margin-top: 70px;
+        position: fixed;
+        top: 0;
+        left: -220px; /* Oculto por defecto */
+        height: 100vh;
+        z-index: 2000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    .sidebar-visible {
+        left: 0 !important; /* Mostrar sidebar */
+        width: 220px !important;
+        min-width: 220px !important;
+        max-width: 220px !important;
+    }
+    .sidebar-collapsed {
+        left: -220px !important; /* Ocultar sidebar */
+    }
+    .main-wrapper {
+        min-height: 100vh;
+        height: auto; 
+    }
+    /* Header más compacto en móviles */
+    .top-bar {
+        padding: 0.75rem !important;
+        position: relative;
+        z-index: 1000;
+    }
+    
+    .top-bar .h2,
+    .top-bar .admin {
+        font-size: 1.25rem;
+    }
+    .logo-aire {
+        height: 30px !important;
+    }
+    
+    /* Botón del menú más prominente */
+    .sidebar-toggle-btn {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.75rem;
+        z-index: 1050;
+    }
+    /* Cuando el sidebar está visible, reducir el contenido */
+    .sidebar-visible ~ .content {
+        margin-left: 0;
+    }
+    
+    /* Overlay oscuro cuando el sidebar está abierto */
+    .sidebar-visible::before {
+        content: '';
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1999;
+    }
+}
+@media (max-width: 480px) {
+    /* Ajustes adicionales para pantallas muy pequeñas */
+.sidebar {
+        margin-top: 70px;
+        width: 200px;
+        left: -200px;
+    }
+    
+    .sidebar-visible {
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+    }
+    
+    .sidebar-collapsed {
+        left: -200px !important;
+    }
+    
+    .top-bar .admin {
+        font-size: 1rem;
+        margin-left: 0.5rem !important;
+    }
+    
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    /* Hacer el sidebar un poco más estrecho en pantallas muy pequeñas */
+    .sidebar .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .sidebar h4 {
+        font-size: 1.1rem;
+    }
+}
+.InputNumero{
+     width: 60px; 
+}
+.admin {
+  font-family: 'ARIA', serif;
+  font-size: 30px;
+  font-weight: normal;
+}
+  .espacio-de-fondo {
+    width: 100px;  /* Ajusta el ancho según lo que necesites */
+    height: 100px; /* Ajusta el alto según lo que necesites */
+    background-image: url('bienvenido.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto; /* Centra el div horizontalmente */
+    margin-right: auto;
+   margin-left: auto;
+  }
+.head {
+    width: auto;
+}
+/* Mejoras específicas para móviles */
+@media (max-width: 767.98px) {
+    .card {
+        border-radius: 0.5rem;
+        border: 1px solid rgba(0,0,0,0.125);
+        margin-bottom: 1rem;
+    }
+    
+    .card-header {
+        border-radius: 0.5rem 0.5rem 0 0 !important;
+        background-color: #0f62fc !important;
+        font-weight: 600;
+    }
+    
+    .table-sm th,
+    .table-sm td {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+    
+    .fw-semibold {
+        font-weight: 600;
+    }
+    
+    .text-muted {
+        color: #6c757d !important;
+        font-size: 0.8rem;
+    }
+    
+    .collapse-toggle {
+        transition: all 0.2s ease;
+    }
+    
+    .btn-icon {
+        margin-left: 0.25rem;
+        font-size: 0.8em;
+        transition: transform 0.2s ease;
+    }
+    
+    /* Animación suave para el colapso */
+    .collapse {
+        transition: height 0.35s ease;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.titulo-asignacion {
+  font-family: 'Roboto', sans-serif;
+}
+/* Para el título "Asignacion" */
+.admin {
+  font-size: 3rem; /* Cambia este valor al tamaño que prefieras */
+  font-weight: bold; /* Opcional: para que se vea más grueso */
+}
+/* Estilos para el título "Asignacion" */
+.admin {
+  font-family: 'Roboto', sans-serif; /* Un tipo de letra más moderno */
+  font-size: 2.5rem; /* Un tamaño de fuente grande y responsivo */
+  font-weight: 700; /* Hace que el texto sea más grueso */
+  color: #333; /* Un color de texto más oscuro */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+.admin {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #27f315; /* Un color verde brillante */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra que le da profundidad */
+}
+.titulo-con-animacion {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  transition: transform 0.3s ease-in-out; /* Transición para un efecto suave */
+}
+/* Colocar en ProyectosList.css u otro archivo .css */
+/* Esto busca la etiqueta de un campo con la clase 'required' y añade el asterisco */
+label.required:after {
+    content: " *";
+    color: red; /* O el color que desees */
+}
