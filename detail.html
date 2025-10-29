@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta Individual por ID</title>
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+    <h1>4. Consulta Individual por ID</h1>
+    <div class="container">
+        <input type="number" id="detailId" placeholder="ID del Cableoperador" required>
+        <button onclick="handleDetailSearch()">Buscar Detalle</button>
+        
+        <div id="detailMessage" class="message"></div>
+        
+        <!-- Contenedor donde se mostrará el detalle -->
+        <div id="cableoperadorDetailContainer">
+            <!-- El detalle del objeto se insertará aquí -->
+        </div>
+    </div>
+    <script src="js/detail.js"></script>
+    <script src="js/checkAuth.js"></script>
+<script>
+    checkAuth(); // Verifica la autenticación al cargar la página
+</script>
+</body>
+</html>

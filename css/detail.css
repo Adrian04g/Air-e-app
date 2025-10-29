@@ -1,0 +1,5 @@
+body { font-family: sans-serif; padding: 20px; }
+.container { margin-bottom: 30px; border: 1px solid #ccc; padding: 15px; }
+.message { margin-top: 10px; padding: 10px; border-radius: 4px; }
+.success { background-color: #d4edda; color: #155724; }
+.error { background-color: #f8d7da; color: #721c24; }

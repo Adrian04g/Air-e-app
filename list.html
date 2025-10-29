@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Cableoperadores</title>
+    <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+
+    <h1>3. Lista de Cableoperadores</h1>
+    <div class="container">
+        <button onclick="getCableoperadoresList()">Cargar Lista (Requiere Token)</button>
+        <div id="listMessage" class="message"></div>
+        
+        <ul id="cableoperadoresListContainer">
+        </ul>
+    </div>
+
+    <script src="js/list.js"></script>
+    <script src="js/checkAuth.js"></script>
+<script>
+    checkAuth(); // Verifica la autenticación al cargar la página
+</script>
+</body>
+</html>

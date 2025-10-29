@@ -2,18 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Consumir API Django/Supabase</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; }
-        .container { margin-bottom: 30px; border: 1px solid #ccc; padding: 15px; }
-        .message { margin-top: 10px; padding: 10px; border-radius: 4px; }
-        .success { background-color: #d4edda; color: #155724; }
-        .error { background-color: #f8d7da; color: #721c24; }
-    </style>
+    <title>Bienvenido a Air-e-app</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/detail.css">
 </head>
 <body>
-
-    <h1>1. Autenticación</h1>
+    <h1>Bienvenido a Air-e-app</h1>
     <div class="container" id="auth-section">
         <h2>Iniciar Sesión</h2>
         <form id="loginForm">
@@ -23,54 +19,7 @@
         </form>
         <div id="loginMessage" class="message"></div>
     </div>
-    
-    <h1>2. Crear Cableoperador (Protegido)</h1>
-    <div class="container" id="create-section" style="display:none;">
-        <p>Token obtenido. Ahora puedes usar el API.</p>
-        <form id="createForm">
-            <input type="number" id="id" placeholder="ID"><br>
-            <input type="text" id="nombre" placeholder="Nombre" required><br>
-            <input type="text" id="nombre_largo" placeholder="Nombre Largo" required><br>
-            <input type="number" id="NIT" placeholder="NIT" required><br>
-            <input type="number" id="Digito_verificacion" placeholder="Dígito de Verificación" required><br>
-            <input type="number" id="RegistroTic" placeholder="Registro TIC" required><br>
-            <input type="number" id="CodigoInterno" placeholder="Código Interno" required><br>
-            <input type="text" id="pais" placeholder="País" required><br>
-            <input type="text" id="ciudad" placeholder="Ciudad" required><br>
-            <input type="text" id="direccion" placeholder="Dirección" required><br>
-            <input type="text" id="Representante" placeholder="Representante" required><br>
-            <input type="text" id="telefono" placeholder="Teléfono" required><br>
-            <input type="email" id="correo_op" placeholder="Correo" required><br>
-            <input type="text" id="observaciones" placeholder="Observaciones" required><br>
-            <input type="number" id="vencimiento_factura" placeholder="Vencimiento Factura" required><br>
-            <input type="number" id="preliquidacion_num" placeholder="Preliquidación Número" required><br>
-            <input type="text" id="preliquidacion_letra" placeholder="Preliquidación Letra" required><br>
-            <input type="text" id="respuesta_preliquidacion" placeholder="Respuesta Preliquidación" required><br>
-            <button type="submit">Crear Cableoperador</button>
-        </form>
-        <div id="createMessage" class="message"></div>
-    </div>
-    <h1>3. Lista de Cableoperadores</h1>
-        <div class="container">
-            <button onclick="getCableoperadoresList()">Cargar Lista (Requiere Token)</button>
-            <div id="listMessage" class="message"></div>
-            
-            <ul id="cableoperadoresListContainer">
-                </ul>
-        </div>
 
-     <h1>4. Consulta Individual por ID</h1>
-    <div class="container">
-        <input type="number" id="detailId" placeholder="ID del Cableoperador" required>
-        <button onclick="handleDetailSearch()">Buscar Detalle</button>
-        
-        <div id="detailMessage" class="message"></div>
-        
-        <!-- Contenedor donde se mostrará el detalle -->
-        <div id="cableoperadorDetailContainer">
-            <!-- El detalle del objeto se insertará aquí -->
-        </div>
-    </div>
-    <script src="app.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
