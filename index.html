@@ -50,7 +50,27 @@
         </form>
         <div id="createMessage" class="message"></div>
     </div>
+    <h1>3. Lista de Cableoperadores</h1>
+        <div class="container">
+            <button onclick="getCableoperadoresList()">Cargar Lista (Requiere Token)</button>
+            <div id="listMessage" class="message"></div>
+            
+            <ul id="cableoperadoresListContainer">
+                </ul>
+        </div>
 
+     <h1>4. Consulta Individual por ID</h1>
+    <div class="container">
+        <input type="number" id="detailId" placeholder="ID del Cableoperador" required>
+        <button onclick="handleDetailSearch()">Buscar Detalle</button>
+        
+        <div id="detailMessage" class="message"></div>
+        
+        <!-- Contenedor donde se mostrará el detalle -->
+        <div id="cableoperadorDetailContainer">
+            <!-- El detalle del objeto se insertará aquí -->
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
