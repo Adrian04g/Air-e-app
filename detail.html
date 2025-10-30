@@ -47,12 +47,10 @@
                     </a>
                 </li>
                 <li class="nav-item mb-2">
-                            <span class="sidebar-text text-white">👨‍💼Usuario: </span>
-                            <span class="sidebar-text text-white"></span>
+                    <span class="sidebar-text text-white">👨‍💼Usuario: <div id="usernav"></div></span>
+                    <span class="sidebar-text text-white"></span>
 
-                            <button type="button" class="sidebar-text text-white bg-secondary" onclick="logout()"><span class="sidebar-icon">🚪</span>Cerrar sesión</button>
-
-                    </a>
+                    <button type="button" class="sidebar-text text-white bg-secondary" onclick="logout()"><span class="sidebar-icon">🚪</span>Cerrar sesión</button>
                 </li>   
             </ul>
         </nav>
@@ -78,6 +76,7 @@
 <script src="js/script.js"></script>
 <script>
     checkAuth(); // Verifica la autenticación al cargar la página
+    getUserProfile();
 </script>
 </body>
 </html>

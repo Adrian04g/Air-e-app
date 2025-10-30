@@ -47,12 +47,10 @@
                     </a>
                 </li>
                 <li class="nav-item mb-2">
-                            <span class="sidebar-text text-white">👨‍💼Usuario: </span>
-                            <span class="sidebar-text text-white"></span>
+                    <span class="sidebar-text text-white">👨‍💼Usuario: <div id="usernav"></div></span>
+                    <span class="sidebar-text text-white"></span>
 
-                            <button type="button" class="sidebar-text text-white bg-secondary" onclick="logout()"><span class="sidebar-icon">🚪</span>Cerrar sesión</button>
-
-                    </a>
+                    <button type="button" class="sidebar-text text-white bg-secondary" onclick="logout()"><span class="sidebar-icon">🚪</span>Cerrar sesión</button>
                 </li>   
             </ul>
         </nav>
@@ -64,35 +62,35 @@
                     <form id="createForm">
                         <input type="number" id="id" placeholder="ID"><br>
                         <input type="text" id="nombre" placeholder="Nombre" required><br>
-                        <input type="text" id="nombre_largo" placeholder="Nombre Largo" required><br>
+                        <input type="text" id="nombre_largo" placeholder="Nombre Largo"><br>
                         <input type="number" id="NIT" placeholder="NIT" required><br>
-                        <input type="number" id="Digito_verificacion" placeholder="Dígito de Verificación" required><br>
-                        <input type="number" id="RegistroTic" placeholder="Registro TIC" required><br>
-                        <input type="number" id="CodigoInterno" placeholder="Código Interno" required><br>
-                        <input type="text" id="pais" placeholder="País" required><br>
-                        <input type="text" id="ciudad" placeholder="Ciudad" required><br>
-                        <input type="text" id="direccion" placeholder="Dirección" required><br>
-                        <input type="text" id="Representante" placeholder="Representante" required><br>
-                        <input type="text" id="telefono" placeholder="Teléfono" required><br>
-                        <input type="email" id="correo_op" placeholder="Correo" required><br>
-                        <input type="text" id="observaciones" placeholder="Observaciones" required><br>
-                        <input type="number" id="vencimiento_factura" placeholder="Vencimiento Factura" required><br>
-                        <input type="number" id="preliquidacion_num" placeholder="Preliquidación Número" required><br>
-                        <input type="text" id="preliquidacion_letra" placeholder="Preliquidación Letra" required><br>
-                        <input type="text" id="respuesta_preliquidacion" placeholder="Respuesta Preliquidación" required><br>
+                        <input type="number" id="Digito_verificacion" placeholder="Dígito de Verificación" ><br>
+                        <input type="number" id="RegistroTic" placeholder="Registro TIC" ><br>
+                        <input type="number" id="CodigoInterno" placeholder="Código Interno" ><br>
+                        <input type="text" id="pais" placeholder="País" ><br>
+                        <input type="text" id="ciudad" placeholder="Ciudad" ><br>
+                        <input type="text" id="direccion" placeholder="Dirección" ><br>
+                        <input type="text" id="Representante" placeholder="Representante" ><br>
+                        <input type="text" id="telefono" placeholder="Teléfono" ><br>
+                        <input type="email" id="correo_op" placeholder="Correo" ><br>
+                        <input type="text" id="observaciones" placeholder="Observaciones" ><br>
+                        <input type="number" id="vencimiento_factura" placeholder="Vencimiento Factura" ><br>
+                        <input type="number" id="preliquidacion_num" placeholder="Preliquidación Número" ><br>
+                        <input type="text" id="preliquidacion_letra" placeholder="Preliquidación Letra" ><br>
+                        <input type="text" id="respuesta_preliquidacion" placeholder="Respuesta Preliquidación" ><br>
                         <button type="submit">Crear Cableoperador</button>
                     </form>
                     <div id="createMessage" class="message"></div>
                 </div>
             </main>
     </div>
-
     <script src="js/create.js"></script>
     <script src="js/checkAuth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
-<script>
-    checkAuth(); // Verifica la autenticación al cargar la página
-</script>
+    <script src="js/script.js"></script>
+    <script>
+        checkAuth(); // Verifica la autenticación al cargar la página
+        getUserProfile();
+    </script>
 </body>
 </html>

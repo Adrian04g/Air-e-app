@@ -10,11 +10,13 @@ document.getElementById('createForm').addEventListener('submit', async (e) => {
     const url = `${API_BASE}cableoperadores/list/`;
 
     const payload = {
+        
         nombre: document.getElementById('nombre').value,
         telefono: document.getElementById('telefono').value,
         correo: document.getElementById('correo_op').value,
         observaciones: document.getElementById('observaciones').value,
-        estado: "Contratado" // Valor por defecto
+        estado: "Contratado", // Valor por defecto
+        ejecutiva: localStorage.getItem('user')
     };
 
     try {

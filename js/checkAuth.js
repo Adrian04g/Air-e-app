@@ -7,6 +7,7 @@ function checkAuth() {
 }
 function logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
     window.location.href = 'index.html';
 }
 const API_BASE = 'http://127.0.0.1:8000/api/'; 
@@ -34,7 +35,7 @@ async function getUserProfile() {
         });
         
         const userData = await response.json();
-        
+        localStorage.setItem('user', userData.id);
         if (response.ok) {
             // Mostrar la información en el frontend
             displayUserProfile(userData);
@@ -50,14 +51,20 @@ async function getUserProfile() {
 
 function displayUserProfile(user) {
     const container = document.getElementById('userInfo');
-    container.innerHTML = `
-        <h3>👋 ¡Bienvenido, ${user.first_name || user.username}!</h3>
-        <ul>
-            <li><strong>Usuario:</strong> ${user.username}</li>
-            <li><strong>Email:</strong> ${user.email}</li>
-            <li><strong>ID:</strong> ${user.id}</li>
-        </ul>
-    `;
+    const usernav = document.getElementById('usernav');
+    if (container) {
+        container.innerHTML = `
+            <h3>👋 ¡Bienvenido, ${user.first_name || user.username}!</h3>
+            <ul>
+                <li><strong>Usuario:</strong> ${user.username}</li>
+                <li><strong>Email:</strong> ${user.email}</li>
+                <li><strong>ID:</strong> ${user.id}</li>
+            </ul>
+        `;
+    }
+    if (usernav) {
+        usernav.innerHTML = `<span>${user.username}</span>`;
+    }
 }
 
 // Llama a la función cuando el DOM esté listo o después del login exitoso
