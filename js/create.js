@@ -7,7 +7,7 @@ document.getElementById('createForm').addEventListener('submit', async (e) => {
     if (!localStorage.getItem('token')) return;
 
     const createMessage = document.getElementById('createMessage');
-    const url = `${API_BASE}cableoperadores/book/`;
+    const url = `${API_BASE}cableoperadores/list/`;
 
     const payload = {
         nombre: document.getElementById('nombre').value,

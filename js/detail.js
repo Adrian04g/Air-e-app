@@ -22,7 +22,7 @@ async function getCableoperadorDetail(cableoperadorId) {
         return;
     }
 
-    const url = `${API_BASE}cableoperadores/book/${cableoperadorId}/`; 
+    const url = `${API_BASE}cableoperadores/detail/${cableoperadorId}/`; 
     const detailMessage = document.getElementById('detailMessage');
     
     document.getElementById('cableoperadorDetailContainer').innerHTML = ''; // Limpia antes

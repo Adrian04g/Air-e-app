@@ -66,8 +66,14 @@
                     <ul id="cableoperadoresListContainer">
                     </ul>
                 </div>
+                <div class="pagination-controls">
+                <button id="prevPageBtn" onclick="goToPage(currentPage.previous)" disabled>Página Anterior</button>
+                <button id="nextPageBtn" onclick="goToPage(currentPage.next)" disabled>Página Siguiente</button>
+            </div>
+            
             </main>
     </div>
+
 
     <script src="js/list.js"></script>
     <script src="js/checkAuth.js"></script>
